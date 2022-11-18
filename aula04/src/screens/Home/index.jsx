@@ -20,7 +20,7 @@ export const Home = ({ navigation }) => {
         <View style={styles.container}>
             <FlatList
                 data={task}
-                renderItem={Card}
+                renderItem={({item}) => <Card item={item}/>}
                 keyExtractor={item => item.id}
             />
             <Button title="Detalhes" onPress={() => navigation.navigate('Detalhes')} />
